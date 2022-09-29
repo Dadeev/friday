@@ -8,32 +8,20 @@ import SuperSelect from "../../common/SuperSelect/SuperSelect";
 import SuperRadio from "../../common/SuperRadio/SuperRadio";
 
 export const SuperComponents = () => {
-    const [text, setText] = useState<string>('')
-
-    const [checked, setChecked] = useState<boolean>(false)
-    const testOnChange = (e: ChangeEvent<HTMLInputElement>) => setChecked(e.currentTarget.checked)
-
-    const [ValuetoSpun, setValuetoSpun] = useState<string>('')
-
     const arr = ['x', 'y', 'z']
-    const [value, onChangeOption] = useState<string>(arr[0])
-    const changeOption = (value: string) => {
-        onChangeOption(value)
-    }
+    const [text, setText] = useState<string>('')
+    const [valueToSpun, setValueToSpun] = useState<string>('')
+    const [valueRadio, setValueRadio] = useState(arr[0])
+    const [valueSelect, setValueSelect] = useState(arr[0])
     return (
         <div className={style.SuperComponents}>
             <SuperButton>Super Button</SuperButton>
             <SuperInputText onChangeText={setText} value={text} error={text ? '' : 'error'}/>
-
-            <SuperCheckbox checked={checked} onChangeChecked={setChecked}>some text</SuperCheckbox>
-            <SuperCheckbox checked={checked} onChange={testOnChange}/>
-
-            <SuperEditableSpan value={ValuetoSpun} onChangeText={setValuetoSpun}
-                               spanProps={{children: ValuetoSpun ? undefined : '✎ enter text...'}}
-            />
-            <SuperSelect options={arr} value={value} onChangeOption={changeOption}/>
-            <SuperRadio name={'radio'} options={arr} value={value} onChangeOption={changeOption}
-            />
+            <SuperCheckbox>some text</SuperCheckbox>
+            <SuperEditableSpan value={valueToSpun} onChangeText={setValueToSpun}
+                               spanProps={{children: valueToSpun ? undefined : '✎ enter text...'}}/>
+            <SuperSelect options={arr} value={valueSelect} onChangeOption={setValueSelect}/>
+            <SuperRadio options={arr} value={valueRadio} onChangeOption={setValueRadio}/>
         </div>
     );
 };

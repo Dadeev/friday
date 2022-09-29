@@ -1,7 +1,10 @@
 .checkbox {
     cursor: pointer;
+    accent-color: #a93be1;
+    transform: scale(1.5);
 }
 
 .spanClassName {
-
+    font-weight: 600;
+    margin-left: 5px;
 }
