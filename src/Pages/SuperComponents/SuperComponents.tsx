@@ -1,11 +1,11 @@
 import React, {ChangeEvent, useState} from 'react';
 import style from './SuperComponents.module.css'
-import SuperButton from "../../common/SuperButton/SuperButton";
-import SuperInputText from "../../common/SuperInput/SuperInputText";
-import SuperCheckbox from "../../common/SuperCheckbox/SuperCheckbox";
-import SuperEditableSpan from "../../common/SuperEditableSpan/SuperEditableSpan";
-import SuperSelect from "../../common/SuperSelect/SuperSelect";
-import SuperRadio from "../../common/SuperRadio/SuperRadio";
+import SuperButton from "../../common/components/SuperButton/SuperButton";
+import SuperInputText from "../../common/components/SuperInput/SuperInputText";
+import SuperCheckbox from "../../common/components/SuperCheckbox/SuperCheckbox";
+import SuperEditableSpan from "../../common/components/SuperEditableSpan/SuperEditableSpan";
+import SuperSelect from "../../common/components/SuperSelect/SuperSelect";
+import SuperRadio from "../../common/components/SuperRadio/SuperRadio";
 
 export const SuperComponents = () => {
     const arr = ['x', 'y', 'z']
