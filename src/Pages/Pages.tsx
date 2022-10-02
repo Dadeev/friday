@@ -18,15 +18,16 @@ const PATH = {
 
 export function Pages() {
     return (
-        <div className="App">
+        <div>
             <Routes>
+                <Route path={'/'} element={<h1>hello</h1>}/>
                 <Route path={PATH.LOGIN} element={<Login/>}/>
                 <Route path={PATH.REGISTRATION} element={<PassRecovery/>}/>
                 <Route path={PATH.PROFILE} element={<Profile/>}/>
                 <Route path={PATH.PASSRECOVERY} element={<PassRecovery/>}/>
                 <Route path={PATH.NEWPASS} element={<NewPass/>}/>
                 <Route path={PATH.TESTSUPERCOMPONENTS} element={<SuperComponents/>}/>
-                <Route path={'/*'} element={<Error404/>}/>
+                <Route path={'*'} element={<Error404/>}/>
             </Routes>
 
         </div>

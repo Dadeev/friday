@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {useState} from 'react';
 import style from './SuperComponents.module.css'
 import SuperButton from "../../common/components/SuperButton/SuperButton";
 import SuperInputText from "../../common/components/SuperInput/SuperInputText";
