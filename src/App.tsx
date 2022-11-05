@@ -7,9 +7,7 @@ import {Pages} from "./Pages/Pages";
 function App() {
     return (
         <div className="App">
-            <BrowserRouter>
-                <Pages/>
-            </BrowserRouter>
+            <Pages/>
         </div>
     );
 }
